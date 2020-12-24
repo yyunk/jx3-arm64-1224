@@ -27,7 +27,9 @@ env:
   FILE_BROWSER: "git"
 
 image:
-  repository: gcr.io/jenkinsxio/lighthouse
+  parentRepository: linarojenkinsx
+  # TODO until this Pull Request merges: https://github.com/jenkins-x/lighthouse/pull/1164
+  tag: arm-v0.0.881
   
 vault:
 {{- if eq .Values.jxRequirements.secretStorage "vault" }}
